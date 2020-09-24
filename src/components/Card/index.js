@@ -17,10 +17,10 @@ const Card = ({ loading, address, homeowner, price, photoURL }) => {
       </ImgWrap>
       <div>
         <Header>
-          <Price>{formatedPrice}</Price>
-          <Address>{address}</Address>
+          <Price loading={loading}>{formatedPrice}</Price>
+          <Address loading={loading}>{address}</Address>
         </Header>
-        <Footer>
+        <Footer loading={loading}>
           <p>Owner</p>
           <p>{homeowner}</p>
         </Footer>

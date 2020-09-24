@@ -69,6 +69,18 @@ export const Header = styled.div`
 export const Price = styled.p`
   font-size: 1.6rem;
   font-weight: 400;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 90%;
+    z-index: 1;
+    background: ${({ theme }) => theme.colors.black2};
+    ${({ loading }) => loading && `content: " "; `};
+  }
 `;
 
 export const Address = styled.p`
@@ -76,6 +88,18 @@ export const Address = styled.p`
   font-weight: 600;
   margin: 0.5rem 0 0;
   color: ${({ theme }) => theme.colors.gray2};
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    z-index: 1;
+    background: ${({ theme }) => theme.colors.gray4};
+    ${({ loading }) => loading && `content: " "; `};
+  }
 `;
 
 export const Footer = styled.div`
@@ -83,17 +107,38 @@ export const Footer = styled.div`
   background: ${({ theme }) => theme.colors.gray3};
 
   p {
+    position: relative;
+
     &:first-of-type {
       font-size: 0.7rem;
       font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: ${({ theme }) => theme.colors.gray};
+
+      &:after {
+        width: 27%;
+        background: ${({ theme }) => theme.colors.gray4};
+      }
     }
 
     &:last-of-type {
       font-weight: 600;
       margin: 0.3rem 0 0;
+
+      &:after {
+        background: ${({ theme }) => theme.colors.black};
+        width: 50%;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 90%;
+      z-index: 1;
+      ${({ loading }) => loading && `content: " "; `};
     }
   }
 `;

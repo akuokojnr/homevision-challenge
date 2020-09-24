@@ -9,6 +9,9 @@ import theme from "../../utils/theme";
 // typography config
 import "../../utils/typography";
 
+// fonts
+import "typeface-inter";
+
 function App() {
   return (
     <>
