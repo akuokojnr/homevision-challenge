@@ -3,15 +3,15 @@ import { ThemeProvider } from "styled-components";
 import { Helmet } from "react-helmet";
 import { TypographyStyle } from "react-typography";
 
-import { GlobalStyles } from "./components/common";
+import { GlobalStyles } from "../common";
 
 import Navbar from "../Navbar";
 import Houses from "../Houses";
 
-import theme from "./utils/theme";
+import theme from "../../utils/theme";
 
 // typography config
-import typography from "./utils/typography";
+import typography from "../../utils/typography";
 
 // fonts
 import "typeface-inter";
