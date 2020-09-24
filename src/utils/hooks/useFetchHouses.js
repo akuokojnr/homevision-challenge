@@ -37,7 +37,7 @@ const useFetchHouses = (pageNumber) => {
       setIsLoading(true);
 
       const response = await client.get(
-        `http://app-homevision-staging.herokuapp.com/api_project/houses?page=${page}&per_page=12`
+        `https://app-homevision-staging.herokuapp.com/api_project/houses?page=${page}&per_page=12`
       );
 
       const results = response.data.houses;
